@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Posts extends Component {
 
@@ -10,12 +11,12 @@ class Posts extends Component {
   // }
   
   render() {
-    console.log('posts props: ', this.props.posts)
     let post = this.props.posts.map((post, i) => {
+      let date = moment(post.created_at);
       return (
         <div key={i}>
           <h4>{post.title}</h4>
-          <p>Posted by: {post.username} on {post.created_at}</p>
+          <p>Posted by: {post.username} on {date.format('MMM Do')}</p>
           <p>{post.post}</p>
         </div>
       )

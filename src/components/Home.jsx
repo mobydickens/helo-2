@@ -18,6 +18,7 @@ class Home extends Component {
     let res = await axios.get('/api/user');
     this.props.currentUser({ username: res.data.username, id: res.data.id });
     let posts = await axios.get('/api/allposts');
+    console.log(posts.data);
     this.setState({
       posts: posts.data
     })
