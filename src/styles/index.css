@@ -8,3 +8,9 @@
     background-image: linear-gradient(to right, config('colors.pink'), config('colors.yellow'));
   }
 }
+
+@responsive {
+  .bg-gradient-2 {
+    background-image: linear-gradient(config('colors.orange'), config('colors.pink'));
+  }
+}

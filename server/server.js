@@ -24,3 +24,5 @@ app.use(session({
 app.post('/auth/register', controller.newUser);
 // LOGIN USER
 app.post('/auth/login', controller.loginUser);
+// CURRENT USER
+app.get('/api/user', controller.currentUser);

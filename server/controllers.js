@@ -35,5 +35,12 @@ module.exports = {
         return res.status(200).send({ loggedIn: false, message: 'Incorrect password!'});
       }
     }
+  },
+  currentUser: (req, res) => {
+    if(req.session.user) {
+      res.status(200).send(req.session.user);
+    } else {
+      res.status(401).send({ loggedIn: false, message: 'Please log in to view account'})
+    }
   }
 }

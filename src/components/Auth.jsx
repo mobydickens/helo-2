@@ -16,11 +16,30 @@ class Auth extends Component {
 
   async register() {
     let res = await axios.post('/auth/register', {...this.state} );
-    console.log(res.data);
+    console.log(res.data)
     this.setState({
       username: '',
       password: ''
     })
+    if(!res.data.loggedIn) {
+      alert(res.data.message);
+    }
+    this.props.newUser({id: res.data.id, username: res.data.username});
+    if(res.data.loggedIn) {
+      this.props.history.push('/home');
+    }
+  }
+
+  async login() {
+    let res = await axios.post('/auth/login', {...this.state} );
+    console.log('login: ', res.data);
+    this.setState({
+      username: '',
+      password: ''
+    })
+    if(!res.data.loggedIn) {
+      alert(res.data.message);
+    }
     this.props.newUser({id: res.data.id, username: res.data.username});
     if(res.data.loggedIn) {
       this.props.history.push('/home');
@@ -29,7 +48,6 @@ class Auth extends Component {
 
   
   render() {
-    console.log(this.props.state)
     return (
       <div className='w-full h-screen bg-gradient'>
         <div className='container mx-auto w-2/5 h-screen flex flex-col justify-center'>
@@ -53,7 +71,9 @@ class Auth extends Component {
                 type="password"/>
             </div>
             <div>
-              <button className='bg-grey-darkest hover:bg-pink hover:border-pink text-white font-semibold py-2 px-4 border border-grey-darkest shadow m-5'>Login</button>
+              <button
+                onClick={ () => this.login() } 
+                className='bg-grey-darkest hover:bg-pink hover:border-pink text-white font-semibold py-2 px-4 border border-grey-darkest shadow m-5'>Login</button>
               <button
                 onClick={ () => this.register() }
                 className='bg-grey-darkest hover:bg-pink hover:border-pink text-white font-semibold py-2 px-4 border border-grey-darkest shadow m-5'>Register</button>
