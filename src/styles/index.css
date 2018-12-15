@@ -1,0 +1,11 @@
+
+@tailwind preflight;
+@tailwind components;
+
+@responsive {
+  .bg-gradient {
+    background-image: linear-gradient(to right, config('colors.pink'), config('colors.yellow'));
+  }
+}
+
+@tailwind utilities;
