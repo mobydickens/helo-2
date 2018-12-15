@@ -11,15 +11,14 @@ class Auth extends Component {
             <div>
               <label className='text-white m-5'>Username: </label>
               <input 
-                className='bg-white appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
+                className='bg-white appearance-none border-2 border-grey-lighter w-full py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
                 type="text"/>
             </div>
             <div>
-              <label className='text-white m-5'></label>
+              <label className='text-white m-5'>Password: </label>
               <input 
-                className='bg-white appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
-                type="text"
-              />
+                className='bg-white appearance-none border-2 border-grey-lighter w-full py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
+                type="text"/>
             </div>
             <div>
               <button className='bg-grey-darkest hover:bg-pink hover:border-pink text-white font-semibold py-2 px-4 border border-grey-darkest shadow m-5'>Login</button>
