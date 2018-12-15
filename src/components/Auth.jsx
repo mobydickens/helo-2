@@ -21,7 +21,7 @@ class Auth extends Component {
       username: '',
       password: ''
     })
-    this.newUser(res.data);
+    this.props.newUser({id: res.data.id, username: res.data.username});
     if(res.data.loggedIn) {
       this.props.history.push('/home');
     }
@@ -29,6 +29,7 @@ class Auth extends Component {
 
   
   render() {
+    console.log(this.props.state)
     return (
       <div className='w-full h-screen bg-gradient'>
         <div className='container mx-auto w-2/5 h-screen flex flex-col justify-center'>
