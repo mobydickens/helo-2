@@ -26,3 +26,5 @@ app.post('/auth/register', controller.newUser);
 app.post('/auth/login', controller.loginUser);
 // CURRENT USER
 app.get('/api/user', controller.currentUser);
+//LOGOUT
+app.get('/api/logout', controller.logoutUser);

@@ -42,5 +42,10 @@ module.exports = {
     } else {
       res.status(401).send({ loggedIn: false, message: 'Please log in to view account'})
     }
+  },
+  logoutUser: (req, res) => {
+    console.log('running')
+    req.session.destroy();
+    res.status(200).send({ loggedIn: false })
   }
 }
