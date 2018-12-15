@@ -524,11 +524,6 @@ table {
   }
 }
 
-.bg-gradient {
-  background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
-  background-image: linear-gradient(to right, #f66d9b, #ffed4a);
-}
-
 .list-reset {
   list-style: none;
   padding: 0;
@@ -6154,12 +6149,12 @@ table {
   z-index: auto;
 }
 
-@media (min-width: 576px) {
-  .sm\:bg-gradient {
-    background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
-    background-image: linear-gradient(to right, #f66d9b, #ffed4a);
-  }
+.bg-gradient {
+  background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
+  background-image: linear-gradient(to right, #f66d9b, #ffed4a);
+}
 
+@media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
     padding: 0;
@@ -11760,14 +11755,14 @@ table {
   .sm\:z-auto {
     z-index: auto;
   }
-}
 
-@media (min-width: 768px) {
-  .md\:bg-gradient {
+  .sm\:bg-gradient {
     background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
     background-image: linear-gradient(to right, #f66d9b, #ffed4a);
   }
+}
 
+@media (min-width: 768px) {
   .md\:list-reset {
     list-style: none;
     padding: 0;
@@ -17368,14 +17363,14 @@ table {
   .md\:z-auto {
     z-index: auto;
   }
-}
 
-@media (min-width: 992px) {
-  .lg\:bg-gradient {
+  .md\:bg-gradient {
     background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
     background-image: linear-gradient(to right, #f66d9b, #ffed4a);
   }
+}
 
+@media (min-width: 992px) {
   .lg\:list-reset {
     list-style: none;
     padding: 0;
@@ -22976,14 +22971,14 @@ table {
   .lg\:z-auto {
     z-index: auto;
   }
-}
 
-@media (min-width: 1200px) {
-  .xl\:bg-gradient {
+  .lg\:bg-gradient {
     background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
     background-image: linear-gradient(to right, #f66d9b, #ffed4a);
   }
+}
 
+@media (min-width: 1200px) {
   .xl\:list-reset {
     list-style: none;
     padding: 0;
@@ -28583,5 +28578,10 @@ table {
 
   .xl\:z-auto {
     z-index: auto;
+  }
+
+  .xl\:bg-gradient {
+    background-image: -webkit-linear-gradient(left, #f66d9b, #ffed4a);
+    background-image: linear-gradient(to right, #f66d9b, #ffed4a);
   }
 }

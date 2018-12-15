@@ -4,7 +4,6 @@ class Auth extends Component {
   render() {
     return (
       <div className='w-full h-screen bg-gradient'>
-      TESTING
         <div className='container mx-auto w-2/5 h-screen flex flex-col justify-center'>
           <div className='w-full h-500px bg-gradient flex flex-col items-center justify-center shadow-lg'>
             <img src={ img } alt='smile' />
