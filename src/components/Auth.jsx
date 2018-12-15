@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Auth extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    }
+  }
+
+
+  
   render() {
     return (
       <div className='w-full h-screen bg-gradient'>
@@ -10,13 +22,17 @@ class Auth extends Component {
             <div className='text-5xl text-white font-bold leading-loose'>Helo</div>
             <div>
               <label className='text-white m-5'>Username: </label>
-              <input 
+              <input
+                onChange={ (e) => this.setState({ username: e.target.value })}
+                value={ this.state.username } 
                 className='bg-white appearance-none border-2 border-grey-lighter w-full py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
                 type="text"/>
             </div>
             <div>
               <label className='text-white m-5'>Password: </label>
               <input 
+                onChange={ (e) => this.setState({ password: e.target.value })}
+                value={ this.state.password } 
                 className='bg-white appearance-none border-2 border-grey-lighter w-full py-2 px-2 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-pink' 
                 type="text"/>
             </div>
