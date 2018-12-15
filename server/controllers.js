@@ -43,6 +43,15 @@ module.exports = {
       res.status(401).send({ loggedIn: false, message: 'Please log in to view account'})
     }
   },
+  allPosts: async (req, res) => {
+    const db = req.app.get('db');
+    let posts = await db.all_posts();
+    if(!posts[0]) {
+      res.status(200).send({ message: 'There are no posts to display!'} );
+    } else {
+    res.status(200).send(posts);
+    }
+  },
   logoutUser: (req, res) => {
     console.log('running')
     req.session.destroy();
