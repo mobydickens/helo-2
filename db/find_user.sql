@@ -1,2 +1,2 @@
-SELECT * FROM person
+SELECT * FROM member
 WHERE username = $1;
