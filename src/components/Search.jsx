@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Search extends Component {
   render() {
     return (
-      <div>
-        Search box
+      <div className='mt-8 mx-32 p-8 bg-white shadow'>
+        Search
       </div>
     );
   }
