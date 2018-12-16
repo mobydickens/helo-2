@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -14,8 +15,8 @@ class Header extends Component {
           <div className='text-white text-center text-2xl ml-4 mr-4 mt-3'>
             { this.props.username }
           </div>
-          <i className="fas fa-home text-4xl text-white text-center mt-6 cursor-pointer hover:text-pink-lightest"></i>
-          <i className="fas fa-file-alt text-4xl text-white text-center mt-8 cursor-pointer hover:text-pink-lightest"></i>
+          <Link className='text-center' to='/home'><i className="fas fa-home text-4xl text-white  mt-6 cursor-pointer hover:text-pink-lightest"></i></Link>
+          <Link className='text-center' to='/newpost'><i className="fas fa-file-alt text-4xl text-white mt-8 cursor-pointer hover:text-pink-lightest"></i></Link>
         </div>
         <div>
           <i onClick={ this.logout } className="fas fa-sign-out-alt text-white text-4xl mb-8 ml-10 cursor-pointer hover:text-pink-lightest"></i>
