@@ -52,8 +52,13 @@ module.exports = {
     res.status(200).send(posts);
     }
   },
+  singlePost: async (req, res) => {
+    const db = req.app.get('db');
+    const { id } = req.params;
+    let post = await db.get_single([ id ]);
+    res.status(200).send(post);
+  },
   logoutUser: (req, res) => {
-    console.log('running')
     req.session.destroy();
     res.status(200).send({ loggedIn: false })
   }

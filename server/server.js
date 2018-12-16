@@ -28,5 +28,7 @@ app.post('/auth/login', controller.loginUser);
 app.get('/api/user', controller.currentUser);
 //GET ALL POSTS
 app.get('/api/allposts', controller.allPosts);
+//GET SINGLE POST
+app.get('/api/singlepost/:id', controller.singlePost);
 //LOGOUT
 app.get('/api/logout', controller.logoutUser);
