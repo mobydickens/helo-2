@@ -24,14 +24,6 @@ class Home extends Component {
     })
   }
 
-  logout = () => {
-    axios.get('/api/logout').then(res => {
-      if(!res.data.loggedIn) {
-        this.props.history.push('/');
-      }
-    })
-  }
-
   render() {
     return (
       <div className='w-full h-screen flex'>

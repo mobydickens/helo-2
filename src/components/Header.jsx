@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 class Header extends Component {
+
+  logout = () => {
+    axios.get('/api/logout').then(res => {
+      if(!res.data.loggedIn) {
+        this.props.history.push('/');
+      }
+    })
+  }
+
   render() {
     return (
       <div className='w-32 bg-gradient-2 flex flex-col justify-between'>
@@ -31,4 +42,4 @@ function mapState(state) {
     username: state.username
   }
 }
-export default connect(mapState)(Header);
+export default withRouter(connect(mapState)(Header));
